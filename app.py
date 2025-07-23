@@ -3,6 +3,11 @@ import numpy as np
 from tensorflow.keras.models import load_model
 from PIL import Image
 import tensorflow as tf
+import os
+
+port = int(os.environ.get("PORT", 7860))
+
+st.set_page_config(page_title="Brain Tumor Classifier", layout="centered")
 
 # Load model
 model = load_model("mobilenetv2_finetuned.keras")
